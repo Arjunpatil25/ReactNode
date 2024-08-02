@@ -1,5 +1,5 @@
 //--------------------------------------------------- dbcoonect.js ----------------------------------------------<br>
-const mysql=require("mysql2")
+`const mysql=require("mysql2")
 
 var mysqlconnection = mysql.createConnection({
     host:'localhost',
@@ -18,10 +18,10 @@ mysqlconnection.connect((error)=>{
     }
 })
 
-module.exports=mysqlconnection;
+module.exports=mysqlconnection;`
 
 //-------------------------------------------------------- app.js --------------------------------------------------------<br>
-const express = require("express");
+`const express = require("express");
 const app = express();
 const path = require("path");
 const routes=require("./routes/router")
@@ -36,10 +36,10 @@ app.listen(3003,function(){
 console.log("servor started on 3003")
 })
 
-module.exports=app;
+module.exports=app;`
 
 //----------------------------------------------------- router.js ---------------------------------------------------<br>
-const express = require("express")
+`const express = require("express")
 const myrouter=express.Router();
 const connection=require("../db/dbconnect");
 
@@ -102,10 +102,10 @@ myrouter.post("/updatecourse",function(req,res){
         
 })
 })
-module.exports=myrouter;
+module.exports=myrouter;`
 
 //------------------------------------------------add_course.ejs -----------------------------------------------<br>
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -121,10 +121,10 @@ module.exports=myrouter;
         <button type="submit" >Add course </button>
     </form>
 </body>
-</html>
+</html>`
 
 //------------------------------------------- display ------------------------------------------------------<br>
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -161,10 +161,10 @@ module.exports=myrouter;
      <%}%>
     </table>
 </body>
-</html>
+</html>`
 
 //------------------------------------------- update_course -----------------------------------------------<br>
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -181,4 +181,4 @@ module.exports=myrouter;
     </form>
     
 </body>
-</html>
+</html>`
